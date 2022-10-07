@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-image: url('https://www.careersinaudit.com/getasset/45b80f0b-1410-4675-99e6-c6e2885214d4/');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+    backdrop-filter: blur(3px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+h1 {
+    margin: 32px 0;
+    color: #fff;
+    font-size: 28px;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.todo-form {
+    margin-bottom: 32px;
+}
+
+.todo-input {
+    padding: 14px 32px 14px 16px;
+    border: 2px solid #5d0cff;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: #fff;
+}
+
+.todo-input::placeholder {
+    color: #e2e2e2;
+}
+
+.todo-button {
+    background: linear-gradient(90deg,
+            rgba(93, 12, 255, 1) 0%,
+            rgba(155, 0, 250, 1) 100%);
+    color: #fff;
+    font-weight: bold;
+    padding: .75rem 1.65rem;
+    cursor: pointer;
+    transform: rotate(-2deg);
+}
+
+.todo-button:focus {
+    outline: 0;
+}
+
+.todo-button:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #fff;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+.todo-button:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+
+.todo-input.edit {
+    border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+    background: linear-gradient(90deg,
+            rgba(20, 159, 255, 1) 0%,
+            rgba(17, 122, 255, 1) 100%);
+    /* padding: 16px 22px; */
+}
+
+
+.todo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+    background: linear-gradient(90deg, rgba(146, 7, 82, 1) 35%, rgba(255, 0, 151, 1) 100%);
+}
+
+.todo-row:nth-child(4n + 2) {
+    background: linear-gradient(90deg, rgba(255, 166, 43, 1) 35%, rgba(243, 114, 44, 1) 100%);
+}
+
+.todo-row:nth-child(4n + 3) {
+    background: linear-gradient(90deg, rgba(56, 163, 165, 1) 35%, rgba(128, 237, 153, 1) 100%);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.delete-icon {
+    margin-right: 5px;
+    color: #fff;
+}
+
+.edit-icon {
+    color: #fff;
+}
+
+
+
+@media (min-width: 768px) {
+    .todo-button {
+        padding: .75rem 3rem;
+        font-size: 1.25rem;
+    }
+}
